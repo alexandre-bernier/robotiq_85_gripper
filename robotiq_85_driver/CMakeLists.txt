@@ -8,6 +8,6 @@ catkin_python_setup()
 
 catkin_package()
 
-catkin_install_python(PROGRAMS bin/robotiq_85_driver bin/robotiq_85_test 
+catkin_install_python(PROGRAMS scripts/robotiq_85_driver scripts/robotiq_85_test 
                       DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
                       
