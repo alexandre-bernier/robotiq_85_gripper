@@ -47,13 +47,13 @@ class Robotiq85GripperTest:
         if (self._num_grippers == 1):
             rospy.Subscriber("/gripper/stat", GripperStat, self._update_gripper_stat, queue_size=10)
             self._gripper_pub = rospy.Publisher('/gripper/cmd', GripperCmd, queue_size=10)      
-        elif (self._num_grippers == 2):
-            rospy.Subscriber("/left_gripper/stat", GripperStat, self._update_gripper_stat, queue_size=10)
-            self._left_gripper_pub = rospy.Publisher('/left_gripper/stat', GripperCmd, queue_size=10)
-            rospy.Subscriber("/right_gripper/stat", GripperStat, self._update_right_gripper_stat, queue_size=10)
-            self._right_gripper_pub = rospy.Publisher('/right_gripper/cmd', GripperCmd, queue_size=10)
+        #elif (self._num_grippers == 2):
+            #rospy.Subscriber("/left_gripper/stat", GripperStat, self._update_gripper_stat, queue_size=10)
+            #self._left_gripper_pub = rospy.Publisher('/left_gripper/stat', GripperCmd, queue_size=10)
+            #rospy.Subscriber("/right_gripper/stat", GripperStat, self._update_right_gripper_stat, queue_size=10)
+            #self._right_gripper_pub = rospy.Publisher('/right_gripper/cmd', GripperCmd, queue_size=10)
         else:
-            rospy.logerr("Number of grippers not supported (needs to be 1 or 2)")
+            rospy.logerr("Number of grippers not supported (needs to be 1)")
             return
             
         self._gripper_stat = [GripperStat()] * self._num_grippers
@@ -139,10 +139,4 @@ class Robotiq85GripperTest:
                 self._right_gripper_pub.publish(self._gripper_cmd[1])
             
             r.sleep()                
-                
-            
-                
-        
-
-
 
