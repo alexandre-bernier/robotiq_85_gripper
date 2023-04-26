@@ -14,6 +14,7 @@
     <run_depend>robotiq_85_description</run_depend>
     <run_depend>joint_state_publisher</run_depend>
     <run_depend>robot_state_publisher</run_depend>
+    <run_depend>rviz</run_depend>
 
 	<export>
 	</export>
