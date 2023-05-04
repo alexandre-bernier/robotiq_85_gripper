@@ -7,13 +7,12 @@
     <license>BSD</license>
     <author>Patrick Hussey</author>
 
-    <depend>python3-serial</depend>
-
     <buildtool_depend>catkin</buildtool_depend>
     
     <!-- Packages needed to run but not to build-->
     <run_depend>robotiq_85_msgs</run_depend>
     <run_depend>robotiq_85_description</run_depend>
+    <run_depend>python3-serial</run_depend>
 
 	<export>
 	</export>
